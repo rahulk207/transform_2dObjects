@@ -4,7 +4,7 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-import math
+from math import *
 from matplotlib.patches import Ellipse
 
 def mul_matrix(a,b):
@@ -40,7 +40,7 @@ def scale(x,y,sx,sy):
 def rotate(x,y,theta):
 	xr,yr=[],[]
 	theta=math.radians(theta)
-	r=[[math.cos(theta),-1*math.sin(theta),0],[math.sin(theta),math.cos(theta),0],[0,0,1]]
+	r=[[cos(theta), -1*sin(theta),0], [sin(theta), cos(theta),0],[0,0,1]]
 	for i in range(len(x)):
 		c=[[x[i]],[y[i]],[1]]
 		l=mul_matrix(r,c)
